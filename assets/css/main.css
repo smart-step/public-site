@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 5px solid black;
+}
+
+main {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+h2 {
+    margin: 0;
+}
+
+nav > a {
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav > a.selected {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    border-top: 5px solid black;
+}
+
+footer .contact-info {
+    flex-grow: 1;
+}
+
+.contact-type {
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100%;
+    background-color: white;
+    color: black;
+    position: relative;
+}
+
+.container-icons {
+    grid-template-columns: auto auto auto auto auto;
+    padding: 60px 20px;
+}
+
+.container:nth-of-type(2n), header, footer,
+.container:nth-of-type(2n) a, header a, footer a {
+    background-color: #005FA4;
+    color: white;
+}
+
+.hero {
+    height: 400px;
+    background-image: url("../images/hero.jpg");
+    background-position: center;
+}
+
+.hero-text {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+}
+
+.video-wrapper {
+    grid-column-start: span 3;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.video-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    border: 5px solid white;
+}
+
+iframe {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.middle-column {
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-column .container-body {
+    flex-grow: 0;
+}
+
+.container-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container-body {
+    font-size: 18px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.container-action {
+    text-align: right;
+}
+
+.container-action > a {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: black;
+    font-style: italic;
+}
+
+.icon {
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.icon > i {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.timeline .line {
+    position: absolute;
+    height: 5px;
+    background-color: black;
+    top: 50%;
+    width: 100%;
+}

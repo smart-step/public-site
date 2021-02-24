@@ -1,0 +1,14 @@
+.hero {
+    background-image: url("../images/hero.jpg");
+}
+
+#column-1, #column-4 {
+    grid-column-start: span 1;
+    background-image: url("../images/hero.jpg");
+    width: 300px;
+    height: 300px;
+}
+
+#column-2, #column-3 {
+    grid-column-start: span 2;
+}
