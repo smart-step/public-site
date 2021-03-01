@@ -110,6 +110,7 @@ footer .contact-info {
     padding-bottom: 56.25%;
     position: relative;
     border: 5px solid white;
+    box-sizing: border-box;
 }
 
 iframe {
@@ -144,10 +145,10 @@ iframe {
 .container-body {
     font-size: 18px;
     flex-grow: 1;
-    margin-bottom: 10px;
 }
 
 .container-action {
+    margin-top: 10px;
     text-align: right;
 }
 
@@ -162,6 +163,7 @@ iframe {
     font-size: 24px;
     text-align: center;
     text-decoration: none;
+    padding: 10px;
 }
 
 .icon > i {
@@ -171,8 +173,11 @@ iframe {
 
 .timeline {
     position: relative;
-    width: 100%;
-    height: 200px;
+    width: calc(100% - 80px);
+    height: 400px;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .timeline .line {
@@ -180,5 +185,133 @@ iframe {
     height: 5px;
     background-color: black;
     top: 50%;
+    transform: translateY(-50%);
     width: 100%;
+}
+
+.timeline .event {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, calc( -100% + 10px ));
+    max-width: 100px;
+    text-align: center;
+}
+
+.timeline .event:nth-child(2n) {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -10px);
+    max-width: 100px;
+    text-align: center;
+}
+
+.timeline .event-date {
+    font-weight: bold;
+}
+
+.timeline .event-circle {
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.timeline .event:nth-child(2n) .event-circle {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-left: auto;
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005FA4
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    .column:not(.text-column) {
+        margin: auto;
+        width: 100% !important;
+    }
+    .column, .icon {
+        grid-column-start: span 1 !important;
+    }
+    .icon:not(:first-child) {
+        margin-top: 20px;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer .copyright {
+        margin-top: 10px;
+    }
+
+    .timeline {
+        height: 700px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .timeline .line {
+        width: 5px;
+        height: 700px;
+        top: 0;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .timeline .event {
+        left: 50% !important;
+    }
+
+    .timeline .event-info {
+        position: absolute;
+        width: 100px;
+        transform: translate(40px, -50%);
+        top: 0
+    }
+
+    .timeline .event:nth-child(2n) .event-info {
+        transform: translate(-120px, -50%);
+    }
+
+    .timeline .event-circle {
+        margin-top: 0;
+    }
 }

@@ -9,23 +9,54 @@
     height: 300px;
 }
 
-#column-3 {
-    grid-column-start: span 1;
-    background-image: url("../images/hero.jpg");
-    width: 300px;
-    height:300px;
-}
-
-#column-5 {
-    grid-column-start: span 1;
-    background-image: url("../images/hero.jpg");
-    width: 300px;
-    height: 300px;
-}
-
 #column-6 {
     grid-column-start: span 1;
     background-image: url("../images/hero.jpg");
     width: 300px;
     height: 300px;
+}
+
+#column-8 {
+    grid-column-start: span 3;
+}
+
+
+.timeline .event:nth-child(1) {
+    left: 0%;
+}
+.timeline .event:nth-child(2) {
+    left: 10%;
+}
+.timeline .event:nth-child(3) {
+    left: 20%;
+}
+.timeline .event:nth-child(4) {
+    left: 30%;
+}
+.timeline .event:nth-child(5) {
+    left: 60%;
+}
+.timeline .event:nth-child(6) {
+    left: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .timeline .event:nth-child(1) {
+        top: 0%;
+    }
+    .timeline .event:nth-child(2) {
+        top: 10%;
+    }
+    .timeline .event:nth-child(3) {
+        top: 20%;
+    }
+    .timeline .event:nth-child(4) {
+        top: 30%;
+    }
+    .timeline .event:nth-child(5) {
+        top: 60%;
+    }
+    .timeline .event:nth-child(6) {
+        top: 100%;
+    }
 }

@@ -1,0 +1,21 @@
+#column-1 {
+    grid-column-start: span 1;
+    background-image: url("../images/hero.jpg");
+    width: 300px;
+    height: 400px;
+}
+
+#column-2 {
+    grid-column-start: span 1;
+    background-image: url("../images/hero.jpg");
+    width: 300px;
+    height: 400px;
+}
+
+.container {
+    grid-template-columns: auto 1fr auto;
+}
+
+.container-body {
+    margin-bottom: 0;
+}
