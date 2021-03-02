@@ -1,15 +1,21 @@
 #column-1 {
     grid-column-start: span 1;
-    background-image: url("../images/hero.jpg");
+    background-image: url("../images/bookshelf.jpg");
     width: 300px;
     height: 400px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
 }
 
 #column-2 {
     grid-column-start: span 1;
-    background-image: url("../images/hero.jpg");
+    background-image: url("../images/early-urinal.jpg");
     width: 300px;
     height: 400px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
 }
 
 .container {
@@ -18,4 +24,13 @@
 
 .container-body {
     margin-bottom: 0;
+}
+
+@media screen and (min-width: 701px) and (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr auto;
+    }
+    #column-1 {
+        display: none;
+    }
 }

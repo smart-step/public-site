@@ -1,14 +1,33 @@
 .hero {
     background-image: url("../images/hero.jpg");
+    background-size: cover;
 }
 
-#column-1, #column-4 {
+#column-1 {
     grid-column-start: span 1;
-    background-image: url("../images/hero.jpg");
-    width: 300px;
+    background-image: url("../images/urinals.jpg");
+    width: 450px;
     height: 300px;
+    background-size: cover;
+    min-height: 100%;
+}
+
+#column-4 {
+    grid-column-start: span 1;
+    background-image: url("../images/handshake.jpg");
+    width: 500px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
 }
 
 #column-2, #column-3 {
     grid-column-start: span 2;
+}
+
+@media screen and (min-width: 701px) {
+    .container:last-child {
+        grid-template-columns: 1fr auto auto;
+    }
 }
