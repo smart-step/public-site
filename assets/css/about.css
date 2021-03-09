@@ -26,6 +26,9 @@
     grid-column-start: span 3;
 }
 
+.container-icons {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+}
 
 .timeline .event:nth-child(1) {
     left: 0%;
@@ -44,6 +47,17 @@
 }
 .timeline .event:nth-child(6) {
     left: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .container-icons {
+        grid-template-columns: auto !important;
+        grid-template-rows: auto auto auto;
+    }
+    .icon-bio {
+        grid-column-start: span 1;
+        grid-row-start: auto;
+    }
 }
 
 @media screen and (max-width: 700px) {
