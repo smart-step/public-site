@@ -7,12 +7,12 @@ header {
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
-    border-bottom: 5px solid #856902;
+    border-bottom: 5px solid black;
 }
 
 main {
-    border-top: 5px solid #856902;
-    border-bottom: 5px solid #856902;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
 }
 
 h1 {
@@ -48,7 +48,7 @@ footer {
     font-size: 18px;
     display: flex;
     align-items: center;
-    border-top: 5px solid #856902;
+    border-top: 5px solid black;
 }
 
 footer .contact-info {
@@ -113,6 +113,8 @@ footer .contact-info {
 .hero-title {
     font-size: 32px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .hero-subtitle {
@@ -308,7 +310,7 @@ button {
     margin-left: auto;
     font-family: 'Lato', sans-serif;
     background-color: white;
-    border: 5px solid #856902;
+    border: 5px solid black;
     border-radius: 0;
     cursor: pointer;
 }
