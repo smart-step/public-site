@@ -7,18 +7,20 @@ header {
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #856902;
 }
 
 main {
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    border-top: 5px solid #856902;
+    border-bottom: 5px solid #856902;
 }
 
 h1 {
     margin: 0;
     margin-bottom: 10px;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 h2 {
@@ -29,10 +31,15 @@ nav > a {
     font-size: 18px;
     text-decoration: none;
     padding: 0 10px;
+    letter-spacing: 2px;
 }
 
 nav > a.selected {
     text-decoration: underline;
+}
+
+a:hover {
+    font-weight: bold;
 }
 
 footer {
@@ -41,7 +48,7 @@ footer {
     font-size: 18px;
     display: flex;
     align-items: center;
-    border-top: 5px solid black;
+    border-top: 5px solid #856902;
 }
 
 footer .contact-info {
@@ -59,6 +66,22 @@ footer .contact-info {
     background-color: white;
     color: black;
     position: relative;
+    opacity: 0;
+}
+
+.container-visible {
+    animation: bottom-up 0.5s;
+    opacity: 1;
+}
+
+@keyframes bottom-up {
+    0% { top: 7vh; opacity: 0; }
+    100% { top: 0vh; opacity: 1; }
+}
+
+@keyframes left-right {
+    0% { left: -2vw; }
+    100% { left: 0vw; }
 }
 
 .container-icons {
@@ -141,6 +164,7 @@ iframe {
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .container-body {
@@ -151,6 +175,15 @@ iframe {
 .container-action {
     margin-top: 10px;
     text-align: right;
+    position: relative;
+}
+
+.container-body h3 {
+    position: relative;
+}
+
+.container-item-visible {
+    animation: left-right 0.5s;
 }
 
 .container-action > a {
@@ -275,7 +308,7 @@ button {
     margin-left: auto;
     font-family: 'Lato', sans-serif;
     background-color: white;
-    border: 5px solid black;
+    border: 5px solid #856902;
     border-radius: 0;
     cursor: pointer;
 }
