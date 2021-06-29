@@ -313,10 +313,18 @@ button {
     border: 5px solid black;
     border-radius: 0;
     cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.25s;
 }
 
 button:hover {
-    background-color: #005FA4
+    background-color: #005FA4;
+    color: white;
+}
+
+button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .grow {
