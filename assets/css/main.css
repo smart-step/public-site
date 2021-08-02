@@ -22,8 +22,8 @@ h1 {
     text-transform: uppercase;
     font-weight: 900;
     background-image: url(../images/logo.png);
-    width: 224px;
-    height: 130px;
+    width: 120px;
+    height: 70px;
     display: block;
     font-size: 0;
     background-color: white;
@@ -31,7 +31,6 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
-    margin-bottom: 20px;
     background-origin: content-box;
     padding: 10px;
     border: 5px solid black;
@@ -343,6 +342,17 @@ button.disabled {
 
 .grow {
     flex-grow: 1;
+}
+
+@media screen and (min-width: 701px) {
+    header {
+        display: flex;
+    }
+
+    header > nav {
+        flex-grow: 1;
+        text-align: right;
+    }
 }
 
 @media screen and (max-width: 700px) {
